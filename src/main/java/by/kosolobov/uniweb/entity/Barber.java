@@ -3,9 +3,6 @@ package by.kosolobov.uniweb.entity;
 import java.util.List;
 
 public class Barber extends User{
-    private final String firstName;
-    private final String secondName;
-    private final String serName;
     private final String description;
     private final List<Service> services;
 
@@ -17,24 +14,9 @@ public class Barber extends User{
                   String serName,
                   String description,
                   List<Service> services) {
-        super(userId, username, password);
-        this.firstName = firstName;
-        this.secondName = secondName;
-        this.serName = serName;
+        super(userId, username, password, firstName, secondName, serName);
         this.description = description;
         this.services = services;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getSecondName() {
-        return secondName;
-    }
-
-    public String getSerName() {
-        return serName;
     }
 
     public String getDescription() {
